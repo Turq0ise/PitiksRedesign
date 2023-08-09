@@ -1,0 +1,23 @@
+<dialog id="modal">
+    <p>This page is coming soon!</p>
+    <button id="close-modal-btn">Close</button>
+</dialog>
+
+<style>
+    dialog {
+        border-radius: 10px;
+        background: var(--clr-base-lt);
+        margin: auto;
+        padding: var(--fontsize-modifier);
+    }
+
+    dialog > button {
+        margin-top: var(--fontsize-modifier);
+        border-radius: 10px;
+        padding: calc((var(--fontsize-nav-s) / 2) + 0.25rem) calc(var(--fontsize-nav-s) + 0.4rem);
+        background: var(--clr-primary);
+        font-size: var(--fontsize-nav-s);
+        line-height: calc(var(--fontsize-nav-s) * var(--lineheight-modifier));
+        border: none;
+    }
+</style>

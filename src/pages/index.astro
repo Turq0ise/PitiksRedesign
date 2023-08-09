@@ -1,0 +1,39 @@
+---
+import "../styles/index.css";
+
+import MainLayout from "../layouts/MainLayout.astro";
+import Form from "../components/Form.astro"
+
+const servicesDir = "/services";
+const contactDir = "/contact";
+---
+
+<MainLayout>
+	<div class="hero-section" id="hero-section">
+        <section class="main-info">
+            <h1>Capturing memories, one frame at a time</h1>
+            <div class="ctas">
+                <a href={contactDir}>Contact</a>
+                <a href={servicesDir}>Services</a>
+            </div>
+        </section>
+
+        <section class="pics" id="pics-container">
+            <img class="vertical" src="../src/assets/images/201.webp" alt="">
+            <img class="vertical" src="../src/assets/images/103.webp" alt="">
+            <img class="horizontal" src="../src/assets/images/101.webp" alt="">
+        </section>
+    </div>
+
+    <div class="about-section">
+        <div class="main-info">
+            <h2>About Us</h2>
+            <p>Coming from the bright students of MAWD102/202 from S.T.I. Ortigas Extension. We are Pitiks, an on-campus Information Technology Student Organization that specializes in providing photography services within our campus.</p>
+        </div>
+        <a href="/about">Learn More</a>
+    </div>
+
+    <div class="form-section">
+        <Form/>
+    </div>
+</MainLayout>

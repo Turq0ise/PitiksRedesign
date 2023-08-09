@@ -1,0 +1,90 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    justify-content: center;
+    /* height: 90vh; */
+    gap: var(--fontsize-modifier);
+    padding: calc(var(--header-height) * var(--lineheight-modifier)) 0.4rem;
+}
+
+.main > h1,
+.main > p {
+    width: min(100%, 79rem);
+}
+
+.carousel-section {
+    padding-bottom: var(--header-height);
+    text-align: center;
+    padding-block: calc(var(--header-height) * var(--lineheight-modifier));
+}
+
+.carousel-section > .carousel-container {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    gap: var(--gap);
+    padding-block: calc(var(--gap) * 2);
+    
+    --gap: 1.3rem;
+}
+
+.carousel-section > .carousel-container > .carousel {
+    display: flex;
+    gap: var(--gap);
+    animation: 60s slide infinite linear;
+}
+
+.carousel-section > .carousel-container > .carousel > .img-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--gap);
+    width: min(40rem, 100vw);
+}
+
+.carousel-section > .carousel-container > .carousel > .img-container > img {
+    box-shadow: var(--shadow);
+    outline: var(--border);
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.carousel-section > .carousel-container > .carousel > .img-container > img:hover {
+    rotate: 5deg;
+}
+
+.carousel-section > .carousel-container > .carousel > .img-container > img.horizontal {
+    width: 100%;
+}
+
+.carousel-section > .carousel-container > .carousel > .img-container > img.vertical{
+    width: calc(50% - (var(--gap) / 2));
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.showcase {
+    width: min(80rem ,100%);
+    display: flex;
+    flex-flow: row wrap;
+
+    --gap: 1.3rem;
+    gap: var(--gap);
+}
+
+.showcase > img {
+    height: 45rem;
+    min-height: 100%;
+}
+
+.showcase > img.horizontal {
+    height: calc((45rem / 2) - (var(--gap) / 2));
+}

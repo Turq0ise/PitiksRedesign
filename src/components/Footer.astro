@@ -1,0 +1,64 @@
+<footer>
+    <div class="main-info">
+        <a href="/">Pitiks</a>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <p>©Pitiks. All Right Reserved</p>
+</footer>
+
+<style>
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--clr-primary);
+        border: var(--border);
+        border-radius: 25px 25px 0 0;
+        font-size: var(--fontsize-nav-s);
+        padding: 3rem 0.5rem;
+        gap: 3rem;
+        margin-top: auto;
+    }
+
+    footer > .main-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer > .main-info > a {
+        font-family: "DM Serif Display";
+        font-size: var(--fontsize-nav-l);
+        text-decoration: none;
+    }
+
+    footer > .main-info > ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    footer > .main-info > ul > li {
+        list-style: none;
+    }
+
+    footer > .main-info > ul > li > a {
+        text-decoration: none;
+        font-size: var(--fontsize-nav-s);
+    }
+
+    footer > p {
+        text-align: center;
+        font-weight: 300;
+        font-size: var(--fontsize-nav-s);
+        line-height: calc(var(--fontsize-nav-s) * var(--lineheight-modifier));
+    }
+</style>

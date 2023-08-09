@@ -1,0 +1,120 @@
+<div class="form-container">
+    <div class="content-container">
+        <div class="info">
+            <h2>Contact Us</h2>
+            <p>For feedback, ideas, and work outside of our provided services.</p>
+        </div>
+        
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeN13pTeG5vCuI2JHNnQYT8wBLTdhCjmmzYvZ5NkWuqJmb7zg/formResponse" id="contact-form">
+            <div class="form-items">
+                <div class="form-item">
+                    <label for="name-input">Name:</label>
+                    <input type="text" id="name-input" name="entry.641130522" required>
+                </div>
+                
+                <div class="form-item">
+                    <label for="email-input">Email:</label>
+                    <input type="email" id="email-input" name="entry.1112616577" required>
+                </div>
+                
+                <div class="form-item">
+                    <label for="msg-input">Message:</label>
+                    <textarea id="msg-input" name="entry.6547883" required></textarea>
+                </div>
+            </div>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .form-container {
+        display: flex;
+        justify-content: center;
+        width: min(100%, 70rem);
+        background-color: var(--clr-base-lt);
+        border: var(--border);
+        border-radius: 25px;
+        font-size: var(--fontsize-s);
+
+        --textarea-height-modifier: 5;
+    }
+
+    .form-container > .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: min(60rem, 100%);
+        padding: 2rem 1rem;
+    }
+
+    .form-container > .content-container > form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form-container > .content-container > form > .form-items {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2rem;
+    }
+
+    .form-container > .content-container > form > .form-items > .form-item {
+        position: relative;
+    }
+
+    .form-container > .content-container > form > .form-items > .form-item > label {
+        position: absolute;
+        padding-inline: 0.5rem;
+        inset: 0.5rem auto auto 0.5rem;
+        font-weight: 300;
+        background-color: var(--clr-base);
+        border-radius: 10px;
+        /* line-height: calc(var(--fontsize-s) * var(--lineheight-modifier)); */
+        transition: all 0.2s ease-in-out;
+    }
+
+    .form-container > .content-container > form > .form-items > .form-item > input,
+    .form-container > .content-container > form > .form-items > .form-item > textarea {
+        width: 100%;
+        padding: 0.5rem;
+        background-color: var(--clr-base);
+        border: var(--border);
+        border-radius: 10px;
+    }
+
+    .form-container > .content-container > form > .form-items > .form-item > textarea {
+        height: calc(var(--fontsize-s) * var(--textarea-height-modifier));
+    }
+
+    .form-container > .content-container > form > .form-items > .form-item:has(input) {
+        width: 25rem;
+    }
+
+    .form-container > .content-container > form > .form-items > .form-item:has(textarea) {
+        width: 100%;
+    }
+
+    .form-container > .content-container > form > button {
+        border: none;
+        border-radius: 10px;
+        padding: calc(var(--fontsize-s) / 2);
+        background: var(--clr-secondary);
+        /* font-size: var(--fontsize-s); */
+        border: var(--border);
+        color: var(--clr-base);
+    }
+
+    @media screen and (max-width: 900px) {
+        .form-container > .content-container > form > .form-items > .form-item:has(input) {
+            width: 100%;
+        }
+    }
+</style>
+
+<script>
+    import "../scripts/form.js"
+</script>

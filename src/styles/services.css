@@ -1,0 +1,88 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    justify-content: center;
+    gap: var(--fontsize-modifier);
+    padding: calc(var(--header-height) * var(--lineheight-modifier)) 0.4rem;
+}
+
+.main > h1,
+.main > .card-section,
+.main > span {
+    width: min(100%, 79rem);
+}
+
+.main > .card-section {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--fontsize-modifier);
+    /* justify-content: space-between; */
+}
+
+.main > .card-section > .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: calc(var(--fontsize-modifier) * 2);
+    border: var(--border);
+    border-radius: 10px;
+    padding: calc(var(--fontsize-modifier) * 3.5) calc(var(--fontsize-modifier) * 2.5);
+    width: 25rem;
+    aspect-ratio: 7/4.5;
+    box-shadow: var(--shadow);
+
+    background-size: cover;
+    --card-background-gradient: linear-gradient(90deg, var(--clr-base-lt), hsl(var(--clr-base-lt-values) / 0.7));
+}
+
+.main > .card-section > .card:nth-child(1) {
+    background-image: var(--card-background-gradient), url("../assets/images/306.webp");
+}
+
+.main > .card-section > .card:nth-child(2) {
+    background-image: var(--card-background-gradient), url("../assets/images/304.webp");
+}
+
+.main > .card-section > .card:nth-child(3) {
+    background-image: var(--card-background-gradient), url("../assets/images/403.webp");
+}
+
+.main > .card-section > .card > .info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--fontsize-modifier);
+}
+
+.main > .card-section > .card > .info > h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: var(--fontsize-s);
+    font-weight: 700;
+    line-height: normal;
+}
+
+.main > .card-section > .card > .info > p {
+    font-weight: 300;
+}
+
+.main > .card-section > .card > button {
+    width: fit-content;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.main > span,
+.main > span > button {
+    font-size: var(--fontsize-nav-s);
+}
+
+.main > span > button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: underline;
+}

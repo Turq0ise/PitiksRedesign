@@ -1,0 +1,41 @@
+---
+import "../styles/services.css";
+
+import MainLayout from "../layouts/MainLayout.astro";
+import Modal from "../components/Modal.astro"
+---
+
+<MainLayout>
+    <Modal/>
+    <div class="main">
+        <h1>Services</h1>
+        <div class="card-section">
+            <div class="card">
+                <div class="info">
+                    <h2>Solo Package</h2>
+                    <p>4 Photos</p>
+                </div>
+                <button class="open-modal-btn">Learn More</button>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h2>Group Package</h2>
+                    <p>9 Photos</p>
+                </div>
+                <button class="open-modal-btn">Learn More</button>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h2>Section Package</h2>
+                    <p>14 Photos</p>
+                </div>
+                <button class="open-modal-btn">Learn More</button>
+            </div>
+        </div>
+        <span>Click here to <button class="open-modal-btn">learn more</button> about solo photos.</span>
+    </div>
+
+    <script>
+        import "../scripts/modal.js";
+    </script>
+</MainLayout>

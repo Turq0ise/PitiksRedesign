@@ -1,0 +1,137 @@
+<header class="main-header" id="main-header">
+    <nav id="desktop-nav">
+        <a href="/">Pitiks</a>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+        </ul>
+
+        <a class="btn" href="/contact">Contact</a>
+    </nav>
+    <nav id="mobile-nav">
+        <div class="heading">
+            <a href="/">Pitiks</a>
+
+            <button id="nav-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <a class="btn" href="/contact">Contact</a>
+        </ul>
+
+        <p>©Pitiks. All Right Reserved</p>
+    </nav>
+</header>
+
+<style>
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        z-index: 99;
+        padding: 0.4rem;
+    }
+
+    header > nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--clr-base-lt);
+        width: min(100%, 1395px);
+        padding-inline: min(3rem, 2%);
+        height: fit-content;
+        box-shadow: var(--shadow);
+        border: var(--border);
+        border-radius: 15px;
+    }
+
+    header > #mobile-nav {
+        flex-direction: column;
+    }
+
+    header > #mobile-nav > .heading {
+        display: flex;
+        justify-content: space-between;
+        width: min(100%, 1395px);
+    }
+
+    header > #mobile-nav > ul {
+        display: none;
+        flex-direction: column;
+        gap: calc(var(--fontsize-nav-s) * 2);
+        text-align: center;
+    }
+
+    header > nav > a,
+    header > nav > .heading > a {
+        font-family: "DM Serif Display";
+        text-decoration: none;
+        font-size: var(--fontsize-nav-l);
+        line-height: calc(var(--fontsize-nav-l) * var(--lineheight-modifier));
+        padding: 0.5rem;
+    }
+
+    header > nav > ul {
+        display: flex;
+        flex-direction: row;
+        gap: 4.5rem;
+    }
+
+    header > nav > ul li {
+        list-style: none;
+    }
+
+    header > nav > ul li a {
+        text-decoration: none;
+        font-size: var(--fontsize-nav-s);
+        line-height: calc(var(--fontsize-nav-s) * var(--lineheight-modifier));
+        font-weight: 400;
+    }
+
+    header > nav > a.btn,
+    header > #mobile-nav > ul > a.btn {
+        font-family: "Poppins", sans-serif;
+        border-radius: 10px;
+        padding: calc((var(--fontsize-nav-s) / 2) + 0.25rem) calc(var(--fontsize-nav-s) + 0.4rem);
+        background: var(--clr-primary);
+        font-size: var(--fontsize-nav-s);
+        line-height: calc(var(--fontsize-nav-s) * var(--lineheight-modifier));
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    header > #mobile-nav > .heading > button:has(i) {
+        border: none;
+        font-size: var(--fontsize-nav-l);
+        padding-inline: 0.5rem;
+        background: transparent;
+    }
+
+    header > #mobile-nav {
+        display: none;
+    }
+
+    header > #mobile-nav > p {
+        display: none;
+        font-weight: 300;
+        font-size: var(--fontsize-nav-s);
+        line-height: calc(var(--fontsize-nav-s) * var(--lineheight-modifier));
+        text-align: center;
+    }
+
+    @media screen and (max-width: 900px) {
+        header > #desktop-nav {
+            display: none;
+        }
+
+        header > #mobile-nav {
+            display: flex;
+        }
+    }
+</style>

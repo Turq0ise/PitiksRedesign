@@ -1,0 +1,31 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: calc(var(--header-height) * var(--lineheight-modifier)) 0.4rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+
+    --subsection-width: 41rem;
+    --width-offset: 6rem;
+}
+
+.main > .form-container {
+    width: min(calc(var(--subsection-width) - var(--width-offset)), 100%);
+    background: none;
+    border: none;
+
+    --textarea-height-modifier: 8;
+}
+
+.main > .form-container > .content-container > form > .form-items > .form-item {
+    width: 100%;
+}
+
+.main > iframe {
+    width: min(calc(var(--subsection-width) + var(--width-offset)), 100%);
+    border: var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
