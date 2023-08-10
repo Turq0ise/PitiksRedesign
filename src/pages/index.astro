@@ -4,6 +4,10 @@ import "../styles/index.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Form from "../components/Form.astro"
 
+import i101 from "../assets/images/101.webp";
+import i103 from "../assets/images/103.webp";
+import i201 from "../assets/images/201.webp";
+
 const servicesDir = "/PitiksRedesign/services";
 const contactDir = "/PitiksRedesign/contact";
 ---
@@ -19,9 +23,9 @@ const contactDir = "/PitiksRedesign/contact";
         </section>
 
         <section class="pics" id="pics-container">
-            <img class="vertical" src="../src/assets/images/201.webp" alt="">
-            <img class="vertical" src="../src/assets/images/103.webp" alt="">
-            <img class="horizontal" src="../src/assets/images/101.webp" alt="">
+            <img class="vertical" src={i201} alt="">
+            <img class="vertical" src={i103} alt="">
+            <img class="horizontal" src={i101} alt="">
         </section>
     </div>
 
