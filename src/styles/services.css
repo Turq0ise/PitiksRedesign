@@ -18,7 +18,6 @@
     display: flex;
     flex-flow: row wrap;
     gap: var(--fontsize-modifier);
-    /* justify-content: space-between; */
 }
 
 .main > .card-section > .card {

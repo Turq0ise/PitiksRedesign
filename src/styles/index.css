@@ -15,12 +15,6 @@
     margin-bottom: calc(var(--header-height) * var(--lineheight-modifier));
 }
 
-/* .hero-section > .main-info > h1 {
-    font-family: "DM Serif Display";
-    font-size: var(--fontsize-l);
-    line-height: calc(var(--fontsize-l) * var(--lineheight-modifier));
-} */
-
 .hero-section > .main-info > .ctas {
     display: flex;
     flex-flow: row wrap;
@@ -32,7 +26,6 @@
     border-radius: 10px;
     padding: calc(var(--fontsize-s) / 2) calc(var(--fontsize-l) - 0.55rem);
     background: var(--clr-primary);
-    /* font-size: var(--fontsize-s); */
     text-decoration: none;
     border: var(--border);
 }
@@ -62,12 +55,10 @@
 
 .hero-section > .pics > img.vertical {
     width: calc(50% - (var(--gap) / 2));
-    /* aspect-ratio: 10/15; */
 }
 
 .hero-section > .pics > img.horizontal {
     width: 100%;
-    /* aspect-ratio: 15/10; */
 }
 
 .hero-section > .pics > img:hover {
@@ -94,13 +85,10 @@
 
 .about-section > .main-info > h2 {
     color: var(--clr-base);
-    /* font-size: var(--fontsize-l);
-    font-family: "DM Serif Display"; */
 }
 
 .about-section > .main-info > p {
     color: var(--clr-base);
-    /* line-height: calc(var(--fontsize-s) * var(--lineheight-modifier)); */
     width: min(100%, 60rem);
     font-weight: 300;
 }

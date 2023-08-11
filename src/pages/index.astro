@@ -8,6 +8,8 @@ import i101 from "../assets/images/101.webp";
 import i103 from "../assets/images/103.webp";
 import i201 from "../assets/images/201.webp";
 
+import { Image } from "astro:assets";
+
 const servicesDir = "/PitiksRedesign/services";
 const contactDir = "/PitiksRedesign/contact";
 ---
@@ -23,9 +25,9 @@ const contactDir = "/PitiksRedesign/contact";
         </section>
 
         <section class="pics" id="pics-container">
-            <img class="vertical" src={i201} alt="">
-            <img class="vertical" src={i103} alt="">
-            <img class="horizontal" src={i101} alt="">
+            <Image class="vertical" src={i201} quality="mid" alt="" loading="eager"/>
+            <Image class="vertical" src={i103} quality="mid" alt="" loading="eager"/>
+            <Image class="horizontal" src={i101} quality="mid" alt="" loading="eager"/>
         </section>
     </div>
 

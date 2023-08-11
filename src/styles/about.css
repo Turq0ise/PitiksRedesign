@@ -4,7 +4,6 @@
     align-items: center;
     text-align: start;
     justify-content: center;
-    /* height: 90vh; */
     gap: var(--fontsize-modifier);
     padding: calc(var(--header-height) * var(--lineheight-modifier)) 0.4rem;
 }
@@ -69,22 +68,4 @@
     to {
         transform: translateX(-100%);
     }
-}
-
-.showcase {
-    width: min(80rem ,100%);
-    display: flex;
-    flex-flow: row wrap;
-
-    --gap: 1.3rem;
-    gap: var(--gap);
-}
-
-.showcase > img {
-    height: 45rem;
-    min-height: 100%;
-}
-
-.showcase > img.horizontal {
-    height: calc((45rem / 2) - (var(--gap) / 2));
 }
